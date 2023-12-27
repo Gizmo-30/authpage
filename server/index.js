@@ -6,7 +6,6 @@ require('dotenv').config()
 const path = require("path");
 
 
-
 const getDatabasePool = require("./database");
 const {ifUsernameExist, checkStatus} = require("./helpers");
 
