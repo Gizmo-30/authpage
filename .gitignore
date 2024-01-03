@@ -1,27 +1,6 @@
 # Node.js
-server/node_modules
-app/node_modules
-/.env
-# Logs
-logs
-*.log
-npm-debug.log*
-
-# Dependency directories
-pids
-*.pid
-*.seed
-*.pid.lock
-
-# Optional: Editor directories and files
-.vscode/
+node_modules/
 .idea/
-*.suo
-*.ntvs*
-*.njsproj
-*.sln
-*.sw?
-
-# OS generated files
-.DS_Store
-Thumbs.db
+.env/
+server/node_modules/
+app/node_modules/
