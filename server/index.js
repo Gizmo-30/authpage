@@ -24,7 +24,7 @@ const start = async () => {
         const pool = await getDatabasePool()
 
         app.listen(PORT, () => console.log(`server started at http://127.0.0.1:${PORT}`))
-
+        app.get('/', (req,res) => console.log('Hello world'))
         async function getUsers() {
             app.get('/users', async (req, res) => {
                 try {
