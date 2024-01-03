@@ -1,5 +1,7 @@
 const mysql = require('mysql2');
-require('dotenv').config()
+const path = require('path');
+const envFilePath = path.resolve(__dirname, '../.env');
+require('dotenv').config({ path: envFilePath });
 
 async function createDatabasePool() {
     return mysql.createPool({

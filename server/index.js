@@ -3,13 +3,16 @@ const cors = require('cors');
 const bcrypt = require('bcrypt');
 const bodyParser = require('body-parser');
 require('dotenv').config()
-const path = require("path");
 
 
 const getDatabasePool = require("./database");
 const {ifUsernameExist, checkStatus} = require("./helpers");
 
 const app = express();
+
+const path = require('path');
+const envFilePath = path.resolve(__dirname, '../.env');
+require('dotenv').config({ path: envFilePath });
 const PORT = process.env.PORT || 3001;
 app.use(cors());
 app.use(bodyParser.json());
