@@ -5,8 +5,8 @@ const bodyParser = require('body-parser');
 require('dotenv').config()
 
 
-const getDatabasePool = require("./database");
-const {ifUsernameExist, checkStatus} = require("./helpers");
+const getDatabasePool = require("./methods/database");
+const {ifUsernameExist, checkStatus} = require("./methods/helpers");
 
 const app = express();
 
