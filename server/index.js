@@ -16,6 +16,7 @@ app.use(cors({
     origin: 'https://authpage-client.vercel.app',
     credentials: true,
 }));
+app.options('*', cors());
 app.use(bodyParser.json());
 
 
