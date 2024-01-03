@@ -6,6 +6,8 @@ import SignIn from "./Components/SignIn";
 import Users from "./Components/Users";
 import {ErrorProvider} from "./Methods/ErrorContext";
 import {SuccessProvider} from "./Methods/SuccessContext";
+import axios from "axios";
+axios.defaults.baseURL = "https://authpage-server.vercel.app";
 
 function App() {
   return (
