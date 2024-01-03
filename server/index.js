@@ -1,5 +1,5 @@
 const express = require('express');
-// const cors = require('cors');
+const cors = require('cors');
 const bcrypt = require('bcrypt');
 const bodyParser = require('body-parser');
 
@@ -12,7 +12,7 @@ const path = require('path');
 const envFilePath = path.resolve(__dirname, '../.env');
 require('dotenv').config({ path: envFilePath });
 const PORT = process.env.PORT || 3001;
-// app.use(cors());
+app.use(cors({origin: "https://collections-server.vercel.app"}));
 app.use(bodyParser.json());
 
 
