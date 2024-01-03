@@ -1,6 +1,7 @@
 # Node.js
 node_modules/
-.idea
+/.idea
+.idea/
 .env
 server/node_modules/
 app/node_modules/

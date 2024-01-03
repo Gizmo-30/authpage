@@ -24,7 +24,7 @@ const start = async () => {
         const pool = await getDatabasePool()
 
         app.listen(PORT, () => console.log(`server started at http://127.0.0.1:${PORT}`))
-        app.get('/', (req,res) => console.log('Hello world'))
+        app.get('/', (req,res) => res.send('Hello world'))
         async function getUsers() {
             app.get('/users', async (req, res) => {
                 try {
@@ -103,8 +103,10 @@ const start = async () => {
                 return res.status(500).send("Error updating status")
             }
         })
+        return app
     } catch(err) {
         console.log("Error starting server", err)
+        throw err
     }
 }
 start()
