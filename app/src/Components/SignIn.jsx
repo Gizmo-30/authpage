@@ -1,5 +1,5 @@
 import Form from "react-bootstrap/Form";
-import {Alert, Button, FloatingLabel} from "react-bootstrap";
+import {Alert, Button} from "react-bootstrap";
 import {NavLink} from "react-router-dom";
 import React, {useContext, useState} from "react";
 import axios from "axios";

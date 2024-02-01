@@ -13,13 +13,9 @@ const envFilePath = path.resolve(__dirname, '../.env');
 require('dotenv').config({ path: envFilePath });
 const PORT = process.env.PORT || 3001;
 app.use(cors({
-    origin: 'https://authpage-client.vercel.app',
-    credentials: true,
+    origin: ['https://authpage-client.vercel.app', 'http://127.0.0.1:3001/']
 }));
-app.options('*', cors());
 app.use(bodyParser.json());
-
-
 
 const start = async () => {
     try {
